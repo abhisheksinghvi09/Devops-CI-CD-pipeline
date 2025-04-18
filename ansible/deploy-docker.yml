@@ -8,7 +8,7 @@
     - name: Copy Docker image
       copy:
 
-        src: my-webapp.tar
+        src: ../my-webapp.tar
 
         dest: /tmp/my-webapp.tar
     - name: Load Docker image
