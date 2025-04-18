@@ -1,12 +1,25 @@
+<<<<<<< HEAD
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+=======
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+>>>>>>> 578f95e (c1)
   <groupId>com.example</groupId>
   <artifactId>my-webapp</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>my-webapp Maven Webapp</name>
   <url>http://maven.apache.org</url>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 578f95e (c1)
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -15,7 +28,20 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+<<<<<<< HEAD
   <build>
     <finalName>my-webapp</finalName>
+=======
+
+  <build>
+    <finalName>my-webapp</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.2</version>
+      </plugin>
+    </plugins>
+>>>>>>> 578f95e (c1)
   </build>
 </project>
