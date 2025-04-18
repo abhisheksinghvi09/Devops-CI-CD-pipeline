@@ -1,0 +1,21 @@
+- name: Deploy Docker container
+  hosts: docker_host
+  tasks:
+    - name: Ensure Docker is running
+      service:
+        name: docker
+        state: started
+    - name: Copy Docker image
+      copy:
+        src: /home/beast/my-pc/dev/devops/ibm_project/my-webapp/target/my-webapp.tar
+        dest: /tmp/my-webapp.tar
+    - name: Load Docker image
+      shell: docker load -i /tmp/my-webapp.tar
+    - name: Run Docker container
+      docker_container:
+        name: my-webapp
+        image: my-webapp:latest
+        state: started
+        ports:
+          - "8081:8080"
+        restart_policy: always
