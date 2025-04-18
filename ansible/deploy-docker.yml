@@ -7,11 +7,9 @@
         state: started
     - name: Copy Docker image
       copy:
-<<<<<<< HEAD
-        src: /home/beast/my-pc/dev/devops/ibm_project/my-webapp/target/my-webapp.tar
-=======
+
         src: my-webapp.tar
->>>>>>> 578f95e (c1)
+
         dest: /tmp/my-webapp.tar
     - name: Load Docker image
       shell: docker load -i /tmp/my-webapp.tar
